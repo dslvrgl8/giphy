@@ -2,8 +2,7 @@ const GiphyDisplay = ({giphy}) => {
     const loaded = () => {
         return (
             <div>
-                Gif here
-                <img src={gif} />
+                <img src={giphy.data[0].images.original.url} />
             </div>
         )
     }

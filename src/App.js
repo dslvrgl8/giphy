@@ -9,9 +9,10 @@ function App() {
 
   const getGiphy = async (searchTerm) => {
     const response = await fetch(
-      `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=&limit=25&offset=0&rating=g&lang=en`
+      `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${searchTerm}&limit=25&offset=0&rating=g&lang=en`
     )
     const data = await response.json()
+    console.log(data)
     setGiphy(data)
   }
 
